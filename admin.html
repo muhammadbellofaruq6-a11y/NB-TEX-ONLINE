@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NB TEX Online | Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">NB <span>TEX ONLINE</span></a>
+    <a class="admin-link" href="index.html">View shop</a>
+  </header>
+  <main class="admin-main">
+    <p class="eyebrow">PRIVATE AREA</p>
+    <h1>Admin Dashboard</h1>
+    <section id="setup-error" class="notice" hidden>Setup is not complete. Check config.js and refresh this page.</section>
+    <section id="login-panel" class="panel">
+      <h2>Admin sign in</h2>
+      <p class="muted">Use the admin email and password you created in Supabase.</p>
+      <form id="login-form">
+        <label>Email<input id="email" type="email" autocomplete="username" required></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+        <button class="gold-button" type="submit">Sign in</button>
+      </form>
+      <p id="login-message" class="message" role="status"></p>
+    </section>
+    <section id="dashboard" class="panel" hidden>
+      <div class="section-heading"><h2>Manage products</h2><button id="logout" class="outline-button" type="button">Sign out</button></div>
+      <form id="product-form" class="product-form">
+        <input id="product-id" type="hidden">
+        <label>Product name<input id="product-name" required maxlength="120"></label>
+        <label>Price (₦)<input id="product-price" type="number" min="0" step="1" required></label>
+        <label>Description<textarea id="product-description" rows="3"></textarea></label>
+        <label>Product image<input id="product-image" type="file" accept="image/*"></label>
+        <button class="gold-button" type="submit">Save product</button>
+        <button id="cancel-edit" class="outline-button" type="button">Clear form</button>
+      </form>
+      <p id="admin-message" class="message" role="status"></p>
+      <div id="admin-products" class="admin-products"></div>
+    </section>
+  </main>
+  <footer>NB TEX Online · Admin</footer>
+</body>
+</html>

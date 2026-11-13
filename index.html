@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NB TEX Online</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script defer src="store.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">NB <span>TEX ONLINE</span></a>
+    <a class="admin-link" href="admin.html">Admin</a>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">KANO • KWARI MARKET</p>
+      <h1>Style that speaks.<br><span>Quality you can trust.</span></h1>
+      <p>Welcome to NB TEX Online — huluna, kayan sawa da kayan masaku.</p>
+      <a class="gold-button" href="#products">View products / Duba kaya</a>
+    </section>
+    <section id="products" class="section">
+      <div class="section-heading">
+        <div><p class="eyebrow">OUR COLLECTION</p><h2>Available Products</h2></div>
+        <span class="muted">Sabbin kaya • New arrivals</span>
+      </div>
+      <div id="product-list" class="product-grid"><p class="muted">Loading products...</p></div>
+      <p id="empty-message" class="muted" hidden>Ba a saka kaya ba tukuna. Products will appear here.</p>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> NB TEX Online · Kano, Nigeria</footer>
+</body>
+</html>
